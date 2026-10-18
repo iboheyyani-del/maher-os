@@ -1,0 +1,20 @@
+
+{
+  "project": "Maher OS",
+  "version": "0.1.0",
+  "status": "prototype",
+  "architecture": "aarch64",
+  "kernel": {
+    "family": "Linux",
+    "status": "not_integrated"
+  },
+  "android_compatibility": {
+    "goal": true,
+    "status": "planned"
+  },
+  "hardware": {
+    "target": "custom_phone",
+    "soc": null,
+    "board": null
+  }
+}
