@@ -1,8 +1,8 @@
 
-"""Maher Core: initial project status service.
+"""Maher OS project status service.
 
-This prototype reports project metadata only.
-It does not control hardware or boot a phone.
+This module reports project metadata.
+It does not boot a device or build AOSP.
 """
 
 import json
@@ -13,25 +13,33 @@ CONFIG_FILE = ROOT / "maher-os.json"
 
 
 def get_system_status():
-    """Read project configuration and report its current stage."""
+    """Return the current, declared project status."""
     with CONFIG_FILE.open("r", encoding="utf-8") as file:
         config = json.load(file)
+
+    platform = config["platform"]
+    kernel = config["kernel"]
+    android = config["android_compatibility"]
+    build = config["build"]
 
     return {
         "name": config["project"],
         "version": config["version"],
         "architecture": config["architecture"],
-        "kernel_status": config["kernel"]["status"],
-        "android_compatibility": config[
-            "android_compatibility"
-        ]["status"],
-        "bootable": False,
+        "platform": platform["identifier"],
+        "source_integrated": platform["source_integrated"],
+        "kernel_status": kernel["status"],
+        "android_compatibility": android["status"],
+        "bootable": build["bootable"],
+        "target_device": config["hardware"]["target_device"],
     }
 
 
 if __name__ == "__main__":
-    print(json.dumps(
-        get_system_status(),
-        indent=2,
-        ensure_ascii=False,
-    ))
+    print(
+        json.dumps(
+            get_system_status(),
+            indent=2,
+            ensure_ascii=False,
+        )
+    )
