@@ -2,19 +2,32 @@
 {
   "project": "Maher OS",
   "version": "0.1.0",
-  "status": "prototype",
+  "status": "initial_development",
+  "platform": {
+    "name": "Android Open Source Project",
+    "identifier": "AOSP",
+    "source_integrated": false
+  },
   "architecture": "aarch64",
   "kernel": {
     "family": "Linux",
     "status": "not_integrated"
   },
   "android_compatibility": {
-    "goal": true,
-    "status": "planned"
+    "status": "planned",
+    "target": "AOSP"
+  },
+  "branding": {
+    "name": "Maher OS",
+    "tagline": "Your System. Your Control."
   },
   "hardware": {
-    "target": "custom_phone",
+    "target_device": null,
     "soc": null,
     "board": null
+  },
+  "build": {
+    "environment": "remote_linux_planned",
+    "bootable": false
   }
 }
