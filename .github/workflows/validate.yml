@@ -14,16 +14,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check JSON configuration
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate project configuration
         run: python -m json.tool maher-os.json
 
-      - name: Check required files
+      - name: Check required project files
         run: |
           test -f README.md
           test -f SPECIFICATION.md
           test -f core/maher_core.py
           test -f tests/test_maher_core.py
-          echo "Maher OS files verified."
+          echo "Maher OS project files verified."
 
-      - name: Run Maher Core tests
+      - name: Run project tests
         run: python -m unittest discover -s tests -v
