@@ -1,0 +1,14 @@
+
+{
+  "device_name": "Redmi Note 9 Pro Global",
+  "codename": "joyeuse",
+  "model": "M2003J6B2G",
+  "platform": "AOSP",
+  "soc": "Qualcomm Snapdragon 720G",
+  "architecture": "arm64",
+  "device_tree_status": "to_be_reviewed",
+  "kernel_status": "to_be_reviewed",
+  "vendor_blobs_status": "to_be_reviewed",
+  "bootloader_unlocked": false,
+  "bootable_image_available": false
+}
