@@ -1,44 +1,64 @@
 
-# Maher OS — System Specification
+# Maher OS
+
+## Project Overview
+
+Maher OS is a custom operating system project based on
+the Android Open Source Project (AOSP).
+
+The goal is to create a custom Android-based system with
+Maher OS branding, a customized system interface, and
+support for Android applications.
 
 ## Project Status
-Prototype — under development.
-This project is not yet a bootable operating system.
 
-## Vision
-Build an independent mobile operating system
-for a future custom Maher Phone.
+- Project version: 0.1.0
+- Base platform: AOSP
+- Project stage: Initial development
+- AOSP source integrated: No
+- Bootable image available: No
+- Target device selected: No
 
-## Target Architecture
-ARM64 (AArch64).
+## Planned Features
 
-## Kernel
-Linux kernel — planned, not integrated.
+- Maher OS branding
+- Custom system interface
+- Android application support through AOSP
+- System settings customization
+- Security and permission management
+- Device compatibility evaluation
+- Build automation
+- System image validation
 
-## System Components
-- Boot: boot process and hardware initialization.
-- Kernel: memory, processes, and device drivers.
-- Core: essential system services.
-- UI: Maher user interface.
-- Apps: native Maher applications.
-- Security: verified boot and signed updates.
+## Development Requirements
 
-## Android Compatibility
-Future goal: support Android applications
-through compatible Android runtime components.
+- A compatible 64-bit Linux build environment
+- Official AOSP source code
+- Git and Android build tools
+- A supported target device
+- Device-specific kernel and hardware drivers
+- Device testing before release
 
-Compatibility is not implemented yet.
+## Development Approach
 
-## Hardware
-Target: custom smartphone.
-Processor model: not selected.
-Board design: not selected.
+Project files can be managed from a mobile phone.
+Full AOSP compilation will require a suitable remote
+or local Linux build environment.
 
-## Development Rules
-- Test every component before integration.
-- Never claim hardware compatibility without testing.
-- Never flash experimental images onto a daily-use phone.
-- Document known limitations and test results.
+## Important Limitations
 
-## First Milestone
-Validate project configuration and documentation.
+This repository is not currently a complete operating
+system and does not contain an integrated AOSP source tree.
+
+No bootable system image is currently available.
+
+Hardware compatibility and Android application support
+must be tested on a selected target device.
+
+## Project Branding
+
+Name: Maher OS
+
+Tagline: Your System. Your Control.
+
+Platform: Android Open Source Project (AOSP)
